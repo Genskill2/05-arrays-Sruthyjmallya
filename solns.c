@@ -57,21 +57,21 @@ int factors(int number, int primeFactors[]){
   int count = 0;
   int i = 0;
   while(number%2 == 0){
-    list[i] = 2;
+    primeFactors[i] = 2;
     i++;
     number /= 2;
     count++;
   }
   for(int j=3;j<sqrt(number);j+=2){
     while(number%j == 0){
-      list[i] = j;
+      primeFactors[i] = j;
       i++;
       number /= j;
       count++;
     }
   }
   if(number > 2){
-   list[i] = number;
+   primeFactors[i] = number;
    count++;
   }
   return(count);
