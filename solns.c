@@ -8,7 +8,7 @@ int mode(int [], int);
 int factors(int, int []);
 
 int max(int list[],int listCount){
-  max = list[0];
+  int max = list[0];
   for(int i=1;i<listCount;i++){
     if(list[i]>max){
       max = list[i];
@@ -18,7 +18,7 @@ int max(int list[],int listCount){
 }
 
 int min(int list[],int listCount){
-  min = list[0];
+  int min = list[0];
   for(int i=1;i<listCount;i++){
     if(list[i]<min){
       min = list[i];
@@ -70,7 +70,11 @@ int factors(int number, int primeFactors[]){
       count++;
     }
   }
-  return(count):
+  if(number > 2){
+   list[i] = number;
+   count++;
+  }
+  return(count);
 }
 
 
